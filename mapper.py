@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#Exercise 5: mapper stays the same
+#Exercise 6: mapper stays the same
 
 import sys
 
