@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#Exercise 2: adjusted to count the values instead of doing sum
+#Exercise 3: reducer stays the same
 import sys
 
 
