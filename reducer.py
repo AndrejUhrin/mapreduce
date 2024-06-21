@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-#Exercise 1: code stays the same
+#Exercise 2: adjusted to count the values instead of doing sum
 import sys
 
 
-sum_of_values = 0
+count_of_values = 0
 
 previous_key = None
 
@@ -15,8 +15,10 @@ for line in sys.stdin:
     key, value = data
 
     if previous_key != None and previous_key != key:
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values))
-        sum_of_values = 0
-    sum_of_values += float(value)
+        sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
+        count_of_values = 0
+    # Increment the count instead of summing the values
+    count_of_values += 1
     previous_key = key
-sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values))
+if previous_key != None:
+    sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
