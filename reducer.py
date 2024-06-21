@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#Exercise 3: reducer stays the same
+#Exercise 4: reducer stays the same
 import sys
 
 
