@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#Exercise 4: reducer stays the same
+#Exercise 5: categories that have more than 114 purchases
 import sys
 
 
@@ -15,10 +15,11 @@ for line in sys.stdin:
     key, value = data
 
     if previous_key != None and previous_key != key:
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
+        if count_of_values > 114: # adding the 114 as treshold
+            sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
         count_of_values = 0
     # Increment the count instead of summing the values
     count_of_values += 1
     previous_key = key
-if previous_key != None:
+if previous_key != None and count_of_values > 114:
     sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_values))
